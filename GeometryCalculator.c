@@ -9,6 +9,7 @@
 
 
 //main menu of calculator
+//run this method to execute the calculator
 void menu() {
 
 	//variable declaration
