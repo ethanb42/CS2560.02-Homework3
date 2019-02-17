@@ -24,7 +24,7 @@ int turn=0; //used to help determine a tie or win
 
 char board [3][3];  //2D char array to represent the board
 
-
+//run this to execute the program
 int game(){
 
 	//Initialize the board to blank
