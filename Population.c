@@ -15,6 +15,7 @@ int endingPopulation;             //the projected population in x-years
 double deathRate;     //the death rate
 double birthRate;      //the birth rate
 
+//runs this method to execute the program 
 int projectPopulation(){
 
 	printf("Welcome to population projector! \n\n");
