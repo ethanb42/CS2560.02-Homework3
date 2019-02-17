@@ -9,14 +9,15 @@
 int mainTwo(){
 
 	//runs geometry calculator
-//	menu();
+        menu();
 	//runs population projector
-	//projectPopulation();
+	projectPopulation();
 	//runs tic-tac-toe
-	//game();
-	//runs reverse array
-
-//	reverseArray();
+	game();
+	
+	
+	//tested by itself
+       //reverseArray();
 	return 0;
 
 }
