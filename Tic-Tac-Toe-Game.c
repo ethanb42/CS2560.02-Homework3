@@ -6,6 +6,11 @@
  */
 #include <stdio.h>
 
+//define functions
+int printBoard();
+int userTurn();
+int checkWin();
+void end();
 
 //define variables
 int row;      //row for the board
@@ -24,7 +29,7 @@ int turn=0; //used to help determine a tie or win
 
 char board [3][3];  //2D char array to represent the board
 
-//run this to execute the program
+
 int game(){
 
 	//Initialize the board to blank
@@ -47,16 +52,16 @@ int game(){
 
 	if(gameOver==1){
 		printf("The game tied.");
-		exit(1);
+		end();
 	}
 	else if(gameOver == 2){
 		printf("Player 1 won!");
-		exit(1);
+		end();
 
 	}
 	else if (gameOver ==3){
 		printf("Player 2 won!");
-		exit(1);
+		end();
 	}
 
 	return 0;
@@ -129,7 +134,7 @@ int checkWin(){
 				return 0;
 			}
 
-			}
+		}
 
 		if (board[0][x] == board[1][x] && board[0][x]==board[2][x]){
 			if(board[0][x] == 'X'){
@@ -139,9 +144,9 @@ int checkWin(){
 			if(board[0][x] == 'O'){
 				gameOver=3;
 				return 0;
-				}
 			}
-					}
+		}
+	}
 	//last thing is to check the diagonals
 	if (board[0][0] == board[1][1] &&  board[1][1]==board [2][2]){
 		if(board[1][1] == 'X')
@@ -166,21 +171,25 @@ int checkWin(){
 	}
 	return 0;
 
-	}
+}
 
 
 
 int printBoard(){
 
 	for (int i=0; i<3;i++){
-			printf("\n");
-			for (int j =0; j<3; j++){
-				printf("%c ", board[i][j]);
-			}
+		printf("\n");
+		for (int j =0; j<3; j++){
+			printf("%c ", board[i][j]);
 		}
+	}
 	printf("\n");
 	return 0;
 }
 
+void end(){
+
+
+}
 
 

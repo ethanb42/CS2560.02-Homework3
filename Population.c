@@ -15,7 +15,6 @@ int endingPopulation;             //the projected population in x-years
 double deathRate;     //the death rate
 double birthRate;      //the birth rate
 
-//runs this method to execute the program 
 int projectPopulation(){
 
 	printf("Welcome to population projector! \n\n");
@@ -58,31 +57,31 @@ int projectPopulation(){
 
 	//death rate input
 	printf ("Please note the death rate is the percentage decrease of the population due to deaths.\nPlease input a percentage. Ex: 1= 1 percent and 100= percent");
-		do{
-			printf("\nPlease enter the death rate (It must 1 or greater): ");
-			fflush(stdout); //ECLIPSE BUG
-			scanf("%lf", &deathRate);
+	do{
+		printf("\nPlease enter the death rate (It must 1 or greater): ");
+		fflush(stdout); //ECLIPSE BUG
+		scanf("%lf", &deathRate);
 
 
-		}while(deathRate<1);
+	}while(deathRate<1);
 
-		//change deathrate to decimal format
-		deathRate = deathRate /100; // from percentage to decimal
+	//change deathrate to decimal format
+	deathRate = deathRate /100; // from percentage to decimal
 
-		printf("\n\n");
+	printf("\n\n");
 
-		//calculates results and displays year by year
-		for(int i =0; i<years; i++){
-			endingPopulation = startingPopulation + birthRate*startingPopulation - deathRate*startingPopulation;
-			printf("Year %d:       Starting Pop: %d              Projected Pop: %d\n", i+1,startingPopulation, endingPopulation);
-			startingPopulation = endingPopulation;
-		}
+	//calculates results and displays year by year
+	for(int i =0; i<years; i++){
+		endingPopulation = startingPopulation + birthRate*startingPopulation - deathRate*startingPopulation;
+		printf("Year %d:       Starting Pop: %d              Projected Pop: %d\n", i+1,startingPopulation, endingPopulation);
+		startingPopulation = endingPopulation;
+	}
 
-		//displays results
-		printf("\n\n\nAfter %d years the population will be %d people.",years, endingPopulation);
+	//displays results
+	printf("\n\n\nAfter %d years the population will be %d people.",years, endingPopulation);
 
 
-		return 0;
+	return 0;
 }
 
 

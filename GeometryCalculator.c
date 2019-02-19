@@ -7,9 +7,10 @@
 
 #include <stdio.h>
 
+//declare methods
+void end();
 
 //main menu of calculator
-//run this method to execute the calculator
 void menu() {
 
 	//variable declaration
@@ -78,13 +79,13 @@ void menu() {
 		//calculates the area, using length to save space
 		length = length *width;
 		printf("\n\nThe area of the rectangle is %f units squared", length);
-			printf ("\n\nType 'Y' to go back to the menu");
-			while(yes != 'Y' && yes != 'y'){
-				fflush(stdout);  //ECLIPSE bug
-				yes = getchar();
+		printf ("\n\nType 'Y' to go back to the menu");
+		while(yes != 'Y' && yes != 'y'){
+			fflush(stdout);  //ECLIPSE bug
+			yes = getchar();
 
-			}
-			menu();
+		}
+		menu();
 
 		break;
 
@@ -92,43 +93,48 @@ void menu() {
 		//triangles area
 		//height input
 		do{
-				printf("\n\nPlease enter a valid value for the height (non-negative numbers only): ");
-				fflush(stdout); //ECLIPSE BUG
-				scanf("%lf", &height);
+			printf("\n\nPlease enter a valid value for the height (non-negative numbers only): ");
+			fflush(stdout); //ECLIPSE BUG
+			scanf("%lf", &height);
 
-			}
-			while(height <0);
+		}
+		while(height <0);
 
 		//base input
 		do{
-				printf("\n\nPlease enter a valid value for the base (non-negative numbers only): ");
-				fflush(stdout); //ECLIPSE BUG
-				scanf("%lf", &base);
+			printf("\n\nPlease enter a valid value for the base (non-negative numbers only): ");
+			fflush(stdout); //ECLIPSE BUG
+			scanf("%lf", &base);
 
-			}
-			while(base <0);
+		}
+		while(base <0);
 		//calculate area using base to save space
 		base = 0.5 * base * height;
 		printf("\n\nThe area of the triangle is %f units squared", base);
-					printf ("\n\nType 'Y' to go back to the menu");
+		printf ("\n\nType 'Y' to go back to the menu");
 
-					while(yes != 'Y' && yes != 'y'){
-						fflush(stdout);  //ECLIPSE bug
-						yes = getchar();
+		while(yes != 'Y' && yes != 'y'){
+			fflush(stdout);  //ECLIPSE bug
+			yes = getchar();
 
-					}
-					menu();
+		}
+		menu();
 		break;
 
 	case 4:
 		printf("Program Ended");
-		exit(0);
+		end();
 		break;
 
 	default:
 
 		printf("\nYou entered a value outside of (1-4) please try again!.\n\n");
 		menu();
+
+	}
+
+	void end(){
+
 
 	}
 
