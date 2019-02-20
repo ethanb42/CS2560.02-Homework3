@@ -7,15 +7,17 @@
 
 #include <stdio.h>
 
-//declare methods
-void end();
+
+//variable declaration
+double radius, length, width, base, height;
+char yes;
+int loop =1;
 
 //main menu of calculator
-void menu() {
 
-	//variable declaration
-	double radius, length, width, base, height;
-	char yes;
+void menu() {
+	while (loop ==1){
+
 
 
 	//displays menu
@@ -56,7 +58,6 @@ void menu() {
 			yes = getchar();
 
 		}
-		menu();
 		break;
 
 	case 2:
@@ -85,7 +86,7 @@ void menu() {
 			yes = getchar();
 
 		}
-		menu();
+
 
 		break;
 
@@ -118,25 +119,19 @@ void menu() {
 			yes = getchar();
 
 		}
-		menu();
+
 		break;
 
 	case 4:
 		printf("Program Ended");
-		end();
+		loop=0;
 		break;
 
 	default:
-
 		printf("\nYou entered a value outside of (1-4) please try again!.\n\n");
-		menu();
 
 	}
-
-	void end(){
-
-
-	}
-
 }
+}
+
 
